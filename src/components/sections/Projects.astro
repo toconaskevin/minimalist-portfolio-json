@@ -8,6 +8,7 @@ import { projects } from "@cv"
   <ul>
     {
       projects.map(({ url, description, highlights, name, isActive }) => {
+        let highlights: string[] = highlights
         return (
           <li>
             <article>
@@ -21,7 +22,7 @@ import { projects } from "@cv"
                 <p>{description}</p>
               </header>
               <footer>
-                {Array.isArray(highlights) && highlights.map((highlight: string) => {
+                {highlights.map((highlight: string) => {
                   return <span>{highlight}</span>
                 })}
               </footer>
