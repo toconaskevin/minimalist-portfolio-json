@@ -21,7 +21,7 @@ import { projects } from "@cv"
                 <p>{description}</p>
               </header>
               <footer>
-                {highlights.map((highlight: string) => {
+                {Array.isArray(highlights) && highlights.map((highlight: string) => {
                   return <span>{highlight}</span>
                 })}
               </footer>
